@@ -1,0 +1,127 @@
+﻿<Page x:Class="WpfModern.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="630"
+	Title="Page1">
+    <Page.Resources>
+        <Style TargetType="{x:Type DatePickerTextBox}">
+            <Setter Property="Text" Value="Wybierz date" />
+            <!--<Setter Property="Margin" Value="5"></Setter>-->
+            <!--<Setter Property="Padding" Value="5"></Setter>-->
+        </Style>
+        <Style TargetType="{x:Type DatePicker}">
+            <Setter Property="Margin" Value="2"></Setter>
+        </Style>
+       
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+        <Style TargetType="{x:Type mui:BBCodeBlock}">
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+    </Page.Resources>
+    <Grid Style="{StaticResource ContentRoot}" MinWidth="598" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <!--<mui:BBCodeBlock>Data wprowadzenia:</mui:BBCodeBlock>-->
+
+                    <mui:BBCodeBlock>Data wprowadzenia:</mui:BBCodeBlock>
+                    <DatePicker Grid.Column="1" SelectedDate="{Binding CurrentDate}"/>
+                    <mui:BBCodeBlock Grid.Row="1">Data dokumentu:</mui:BBCodeBlock>
+                    <DatePicker Grid.Column="1" Grid.Row="1"></DatePicker>
+                </Grid>
+                <Grid Column="1">
+                    <Grid Margin="20,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <mui:BBCodeBlock>Nr ewidencyjny:</mui:BBCodeBlock>
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox>
+                                <ComboBoxItem>Wb</ComboBoxItem>
+                            </ComboBox>
+                            <mui:BBCodeBlock Grid.Column="1" HorizontalAlignment="Right">Okres spr.</mui:BBCodeBlock>
+                            <ComboBox Grid.Column="2">
+                                <ComboBoxItem>1</ComboBoxItem>
+                                <ComboBoxItem>2</ComboBoxItem>
+                                <ComboBoxItem>3</ComboBoxItem>
+                                <ComboBoxItem>4</ComboBoxItem>
+                                <ComboBoxItem>5</ComboBoxItem>
+                                <ComboBoxItem>6</ComboBoxItem>
+                                <ComboBoxItem>7</ComboBoxItem>
+                                <ComboBoxItem>8</ComboBoxItem>
+                                <ComboBoxItem>9</ComboBoxItem>
+                                <ComboBoxItem>10</ComboBoxItem>
+                                <ComboBoxItem>11</ComboBoxItem>
+                                <ComboBoxItem>12</ComboBoxItem>
+                            </ComboBox>
+                        </Grid>
+                        <mui:BBCodeBlock Grid.Row="1">Nr dokumentu:</mui:BBCodeBlock>
+                        <TextBox BorderThickness="0,0,0,1" Grid.Column="1" Grid.Row="1"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <mui:BBCodeBlock Grid.Column="0">Treść:</mui:BBCodeBlock>
+                <TextBox BorderThickness="0,0,0,1" Grid.Column="1"></TextBox>
+            </Grid>
+        </Grid>
+
+
+
+        <DataGrid Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Lp" />
+                <DataGridTextColumn Header="Opis" Width="2*"/>
+                <DataGridTextColumn Header="Kwota Wn" Width="*"/>
+                <DataGridTextColumn Header="Konto Wn" Width="*"/>
+                <DataGridTextColumn Header="Kwota Ma" Width="*"/>
+                <DataGridTextColumn Header="Konto Ma" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
