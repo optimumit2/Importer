@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mui="http://firstfloorsoftware.com/ModernUI"
       mc:Ignorable="d" 
       d:DesignHeight="400" d:DesignWidth="630"
+      d:DataContext="{Binding ThisDataContext}"
 	Title="Page1">
     <Page.Resources>
         <Style TargetType="{x:Type DatePickerTextBox}">
@@ -31,6 +32,7 @@
     <Grid Style="{StaticResource ContentRoot}" MinWidth="598" >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -97,7 +99,7 @@
                             </ComboBox>
                         </Grid>
                         <mui:BBCodeBlock Grid.Row="1">Nr dokumentu:</mui:BBCodeBlock>
-                        <TextBox BorderThickness="0,0,0,1" Grid.Column="1" Grid.Row="1"/>
+                        <TextBox BorderThickness="0,0,0,1" Grid.Column="1" Grid.Row="1" Text="{Binding DocumentNumber}"/>
                     </Grid>
                 </Grid>
             </Grid>
@@ -123,5 +125,32 @@
                 <DataGridTextColumn Header="Konto Ma" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Grid Grid.Row="2">
+            <TabPanel>
+                <TabItem Header="Kontrahenci">
+                    <Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Kontrahent pozycji"/>
+                            <Label Grid.Row="1" Content="Nazwa"/>
+                            <Label Grid.Row="2" Content="Skrót"/>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Konto FK"></TabItem>
+            </TabPanel>
+        </Grid>        
     </Grid>
 </Page>

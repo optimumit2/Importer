@@ -32,8 +32,11 @@ namespace WpfModern
     {
         public ThisDataContext()
         {
-            CurrentDate = DateTime.Now;            
+            CurrentDate = DateTime.Now;
+            DocumentNumber = "Doc124";
         }
+
         public DateTime CurrentDate { get; set; }
+        public string DocumentNumber { get; set; }
     }
 }
