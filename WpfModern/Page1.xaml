@@ -113,8 +113,6 @@
             </Grid>
         </Grid>
 
-
-
         <DataGrid Grid.Row="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Lp" />
@@ -125,10 +123,41 @@
                 <DataGridTextColumn Header="Konto Ma" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
+        
+        <Grid Grid.Row="2">
+        <TabControl>
+            <TabItem Header="Test1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Label Content="kontrahent z WB"/>
+                    </Grid>
+                    <GridSplitter Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Stretch" ResizeBehavior="PreviousAndNext" Width="5"/>
+                    <Grid Grid.Column="2">
+                        <Label Content="kontrahenci FK"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Test2">
+                <Grid>
+                    <Label Content="Plan Kont"/>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+        </Grid>
+
+
+        <!--
         <Grid Grid.Row="2">
             <TabPanel>
                 <TabItem Header="Kontrahenci">
-                    <Grid>
+
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -147,10 +176,10 @@
                             <Label Grid.Row="1" Content="Nazwa"/>
                             <Label Grid.Row="2" Content="Skrót"/>
                         </Grid>
-                    </Grid>
+
                 </TabItem>
                 <TabItem Header="Konto FK"></TabItem>
             </TabPanel>
-        </Grid>        
+        </Grid>-->        
     </Grid>
 </Page>
