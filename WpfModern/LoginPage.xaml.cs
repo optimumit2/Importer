@@ -24,5 +24,29 @@ namespace WpfModern
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window.GetWindow(btnOk).DialogResult = true;
+
+            //var window = GetWindow();
+            //if (window == null)
+            //    return;
+            //window.DialogResult = true;
+        }
+
+        //private Window GetWindow()
+        //{
+        //    DependencyObject controlParent = this.Parent;
+        //    while (controlParent != null)
+        //    {
+        //        Window window = this.Parent as Window;
+        //        if (window != null)
+        //            return window;
+        //        controlParent = controlParent.
+        //    }
+
+        //    return null;
+        //}
     }
 }

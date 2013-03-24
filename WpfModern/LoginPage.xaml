@@ -29,8 +29,8 @@
             <TextBox Grid.Column="1" Grid.Row="2" x:Name="txtDatabasePath"/>
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Zaloguj" Margin="5"/>
-            <Button Content="Anuluj" Margin="5"/>
+            <Button x:Name="btnOk" Content="Zaloguj" Margin="5" IsDefault="True" Click="Button_Click"/>
+            <Button Content="Anuluj" Margin="5" IsCancel="True"/>
         </StackPanel>
     </Grid>
 </Page>
