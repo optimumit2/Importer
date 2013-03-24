@@ -3,5 +3,4 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
         Title="Logowanie" Height="300" Width="300" ContentSource="LoginPage.xaml" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ToolTip="Logowanie" WindowStyle="ToolWindow">
-
 </mui:ModernWindow>
