@@ -3,8 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mui="http://firstfloorsoftware.com/ModernUI"
-      mc:Ignorable="d" 
-      d:DesignHeight="400" d:DesignWidth="630"
+      d:DesignHeight="600" d:DesignWidth ="830"
+      mc:Ignorable="d"
       d:DataContext="{Binding ThisDataContext}"
 	Title="Page1">
     <Page.Resources>
@@ -16,7 +16,7 @@
         <Style TargetType="{x:Type DatePicker}">
             <Setter Property="Margin" Value="2"></Setter>
         </Style>
-       
+
         <Style TargetType="{x:Type TextBox}">
             <Setter Property="Margin" Value="2"/>
         </Style>
@@ -123,33 +123,61 @@
                 <DataGridTextColumn Header="Konto Ma" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        
+
         <Grid Grid.Row="2">
-        <TabControl>
-            <TabItem Header="Test1">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0">
-                        <Label Content="kontrahent z WB"/>
+            <TabControl>
+                <TabItem Header="Kontrahenci">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Label Content="Kontrahent pozycji" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top" Width="326"/>
+                            <Label Content="Nazwa" HorizontalAlignment="Left" Height="26" Margin="10,37,0,0" VerticalAlignment="Top" Width="44"/>
+                            <TextBox x:Name="txtContractorName" Height="26" Margin="72,37,6,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                            <Label Content="Skrót" HorizontalAlignment="Left" Height="26" Margin="10,68,0,0" VerticalAlignment="Top" Width="57"/>
+                            <TextBox x:Name="txtContractorName_Copy" Height="26" Margin="72,68,161,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                            <Label Content="NIP" Height="26" Margin="186,68,125,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="txtContractorName_Copy1" Height="26" Margin="222,68,6,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                            <Label Content="Miasto" HorizontalAlignment="Left" Height="26" Margin="10,99,0,0" VerticalAlignment="Top" Width="57"/>
+                            <TextBox x:Name="txtContractorName_Copy2" Height="26" Margin="72,99,161,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                            <Label Content="Kod" Height="26" Margin="186,99,125,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="txtContractorName_Copy3" Height="26" Margin="222,99,6,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                            <Label Content="Ulica" HorizontalAlignment="Left" Height="26" Margin="10,130,0,0" VerticalAlignment="Top" Width="44"/>
+                            <TextBox x:Name="txtContractorName_Copy4" Height="26" Margin="72,130,6,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                            <Button x:Name="btnAddContractorToFK" Content="Dodaj do FK" HorizontalAlignment="Left" Height="32" Margin="234,161,0,0" VerticalAlignment="Top" Width="151"/>
+                        </Grid>
+                        <GridSplitter Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Stretch" ResizeBehavior="PreviousAndNext" Width="5"/>
+                        <Grid Grid.Column="2">
+                            <DataGrid Margin="10,0,0,47" ScrollViewer.HorizontalScrollBarVisibility ="Auto">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="id" Visibility="Hidden"/>
+                                    <DataGridTextColumn Header="Pozycja" Width="auto"/>
+                                    <DataGridTextColumn Header="Skrót" Width="auto"/>
+                                    <DataGridTextColumn Header="Nazwa" Width="auto"/>
+                                    <DataGridTextColumn Header="Nip" Width="auto"/>
+                                    <DataGridTextColumn Header="Miejscowość" Width="auto"/>
+                                    <DataGridTextColumn Header="Ulica" Width="auto"/>
+                                    <DataGridTextColumn Header="Nr. domu" Width="auto"/>
+                                    <DataGridTextColumn Header="Nr. mieszk." Width="auto"/>
+                                    <DataGridTextColumn Header="Kod" Width="auto"/>
+                                    <DataGridTextColumn Header="Regon" Width="auto"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <Button x:Name="btnUseSelectedContractor" Content="Użyj kontrahenta" HorizontalAlignment="Left" Height="32" Margin="241,161,0,0" VerticalAlignment="Top" Width="151"/>
+                        </Grid>
                     </Grid>
-                    <GridSplitter Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Stretch" ResizeBehavior="PreviousAndNext" Width="5"/>
-                    <Grid Grid.Column="2">
-                        <Label Content="kontrahenci FK"/>
+                </TabItem>
+
+                <TabItem Header="Konto FK">
+                    <Grid>
+                        <Label Content="Plan Kont" Margin="90,50,533,109"/>
                     </Grid>
-                </Grid>
-            </TabItem>
+                </TabItem>
 
-            <TabItem Header="Test2">
-                <Grid>
-                    <Label Content="Plan Kont"/>
-                </Grid>
-            </TabItem>
-
-        </TabControl>
+            </TabControl>
         </Grid>
 
 
@@ -180,6 +208,6 @@
                 </TabItem>
                 <TabItem Header="Konto FK"></TabItem>
             </TabPanel>
-        </Grid>-->        
+        </Grid>-->
     </Grid>
 </Page>
