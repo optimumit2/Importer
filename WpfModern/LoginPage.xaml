@@ -22,11 +22,11 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <TextBlock Text="Użytkownik:"/>
-            <TextBox Grid.Column="1" x:Name="txtUserName"/>
+            <TextBox Grid.Column="1" x:Name="txtUserName" Text="{Binding UserName}"/>
             <TextBlock Grid.Row="1"  Text="Hasło:"/>
             <TextBox Grid.Column="1" Grid.Row="1" x:Name="txtPassword"/>
             <TextBlock Grid.Row="2" Text="Ścieżka firmy:"/>
-            <TextBox Grid.Column="1" Grid.Row="2" x:Name="txtDatabasePath"/>
+            <TextBox Grid.Column="1" Grid.Row="2" x:Name="txtDatabasePath" Text="{Binding FKDatabasePath}"/>
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="btnOk" Content="Zaloguj" Margin="5" IsDefault="True" Click="Button_Click"/>

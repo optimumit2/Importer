@@ -29,5 +29,5 @@ namespace WpfModern
                 ShutdownMode = ShutdownMode.OnMainWindowClose;
             }
         }
-    }
+    }    
 }
