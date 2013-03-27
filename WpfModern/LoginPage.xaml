@@ -5,13 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-	Title="LoginPage">
+	Title="LoginPage">    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid>
+        <Grid VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition/>
@@ -21,12 +21,21 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <TextBlock Text="Użytkownik:"/>
-            <TextBox Grid.Column="1" x:Name="txtUserName" Text="{Binding UserName}"/>
-            <TextBlock Grid.Row="1"  Text="Hasło:"/>
-            <TextBox Grid.Column="1" Grid.Row="1" x:Name="txtPassword"/>
-            <TextBlock Grid.Row="2" Text="Ścieżka firmy:"/>
-            <TextBox Grid.Column="1" Grid.Row="2" x:Name="txtDatabasePath" Text="{Binding FKDatabasePath}"/>
+            <TextBlock Text="Użytkownik:" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="1" x:Name="txtUserName" Text="{Binding UserName}" Margin="5,5"/>
+            <TextBlock Grid.Row="1"  Text="Hasło:" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="1" Grid.Row="1" x:Name="txtPassword" Margin="5,5"/>
+            <TextBlock Grid.Row="2" Text="Ścieżka firmy:" VerticalAlignment="Center"/>
+
+            <Grid Grid.Column="1" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="txtDatabasePath" Text="{Binding FKDatabasePath}" Margin="5,5"/>
+                <Button x:Name="btnSelectDatabasePath" Grid.Column="1" Content="..." Margin="5,6,5,4" Click="BtnSelectDatabasePath_OnClick"/>
+            </Grid>            
+            
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="btnOk" Content="Zaloguj" Margin="5" IsDefault="True" Click="Button_Click"/>

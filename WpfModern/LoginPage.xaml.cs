@@ -1,6 +1,9 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
+using MS.Internal.Xml.XPath;
 using WpfModern.Configuration;
+using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 
 namespace WpfModern
 {
@@ -38,6 +41,17 @@ namespace WpfModern
         private bool TryToLoginToFK()
         {
             return true;
+        }
+
+        private void BtnSelectDatabasePath_OnClick(object sender, RoutedEventArgs e)
+        {
+            var folderBrowserDialog = new FolderBrowserDialog();            
+
+            var dialogResult = folderBrowserDialog.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                _applicationConfiguration.FKDatabasePath = folderBrowserDialog.SelectedPath;
+            }
         }
     }
 }
