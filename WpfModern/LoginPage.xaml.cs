@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using FKIntegration;
 using MS.Internal.Xml.XPath;
 using WpfModern.Configuration;
 using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
@@ -40,7 +41,13 @@ namespace WpfModern
 
         private bool TryToLoginToFK()
         {
-            return true;
+            FKIntegrationManager.ConfigureFKP().User(txtUserName.Text).Password(txtPassword.Text)
+                .Database(txtDatabasePath.Text).UseSilentMode();
+
+            if (FKIntegrationManager.LogUser())
+                return true;
+
+            return false;
         }
 
         private void BtnSelectDatabasePath_OnClick(object sender, RoutedEventArgs e)

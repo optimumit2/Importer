@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{870F0C58-970A-4B05-BD9B-3E993EAB1A6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FKIntegration</RootNamespace>
+    <AssemblyName>FKIntegration</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Documents\SimpleDocument.cs" />
+    <Compile Include="Repositories\IDocumentDefinitionRepository.cs" />
+    <Compile Include="Repositories\FKP\DocumentDefinitionRepository.cs" />
+    <Compile Include="Repositories\FKP\AccountRepository.cs" />
+    <Compile Include="CardInexes\BankingAccount.cs" />
+    <Compile Include="Currency.cs" />
+    <Compile Include="CardInexes\Dictionary.cs" />
+    <Compile Include="Documents\BreakDown.cs" />
+    <Compile Include="Documents\CashReportPosition.cs" />
+    <Compile Include="Documents\CreditEntryPosition.cs" />
+    <Compile Include="Documents\CurrencyCreditEntryPosition.cs" />
+    <Compile Include="Documents\CurrencyDebitEntryPosition.cs" />
+    <Compile Include="Documents\DebitEntryPosition.cs" />
+    <Compile Include="Repositories\IAccountRepository.cs" />
+    <Compile Include="Repositories\ICurrencyRepository.cs" />
+    <Compile Include="Repositories\IDictionaryRepository.cs" />
+    <Compile Include="Repositories\FKP\CardIndexBaseRepository.cs" />
+    <Compile Include="Repositories\FKP\BankingAccountRepository.cs" />
+    <Compile Include="CardInexes\Contractor.cs" />
+    <Compile Include="Repositories\FKP\ContractorRepository.cs" />
+    <Compile Include="Address.cs" />
+    <Compile Include="AccountSide.cs" />
+    <Compile Include="Account.cs" />
+    <Compile Include="CardInexes\Country.cs" />
+    <Compile Include="Repositories\FKP\CountryRepository.cs" />
+    <Compile Include="Repositories\FKP\CurrencyRepository.cs" />
+    <Compile Include="Repositories\FKP\DepartmentRepository.cs" />
+    <Compile Include="Documents\BankStatement.cs" />
+    <Compile Include="CurrencyEnum.cs" />
+    <Compile Include="Documents\CashReport.cs" />
+    <Compile Include="Documents\Document.cs" />
+    <Compile Include="Documents\DocumentMark.cs" />
+    <Compile Include="Documents\DocumentType.cs" />
+    <Compile Include="Repositories\IBankingAccountRepository.cs" />
+    <Compile Include="Documents\Position.cs" />
+    <Compile Include="Repositories\ICountryRepository.cs" />
+    <Compile Include="Repositories\IDepartmentRepository.cs" />
+    <Compile Include="Documents\SalesInvoice.cs" />
+    <Compile Include="Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Money.cs" />
+    <Compile Include="CardInexes\Employee.cs" />
+    <Compile Include="Repositories\FKP\DictionaryRepository.cs" />
+    <Compile Include="Repositories\FKP\EmployeeRepository.cs" />
+    <Compile Include="FKFConfiguration.cs" />
+    <Compile Include="FKIntegrationException.cs" />
+    <Compile Include="FKPConfiguration.cs" />
+    <Compile Include="Repositories\IContractorRepository.cs" />
+    <Compile Include="IntegrationInfo.cs" />
+    <Compile Include="FKIntegrationManager.cs" />
+    <Compile Include="CompanyInfo.cs" />
+    <Compile Include="FKPDatabase.cs" />
+    <Compile Include="FKPUser.cs" />
+    <Compile Include="CardInexes\Department.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyType.cs" />
+    <Compile Include="Repositories\FKP\SyncroData.cs" />
+    <Compile Include="YearInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MXDokFK">
+      <Guid>{3F707000-DC7D-4B37-A4C8-7270644020F7}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Clearings\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
