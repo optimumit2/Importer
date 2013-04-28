@@ -1,9 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
-using MS.Internal.Xml.XPath;
 using WpfModern.Configuration;
-using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 
 namespace WpfModern
 {
