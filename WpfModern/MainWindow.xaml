@@ -3,11 +3,11 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:mui="http://firstfloorsoftware.com/ModernUI"
   Title="MainWindow" Height="350" Width="525"
-                  ContentSource="/Page1.xaml" MinWidth="800" MinHeight="600">
+                  ContentSource="/DocumentWindow.xaml" MinWidth="800" MinHeight="600">
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="Optimum Bank">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Dokument" Source="/Page1.xaml"/>
+                <mui:Link DisplayName="Dokument" Source="/DocumentWindow.xaml"/>
                 <mui:Link DisplayName="link 2" Source="/Page2.xaml"/>
                 <mui:Link DisplayName="link 3"/>
             </mui:LinkGroup.Links>                        

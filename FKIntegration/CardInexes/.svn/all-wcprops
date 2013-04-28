@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/34428/FKIntegration/CardInexes
+END
+Contractor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/34322/FKIntegration/CardInexes/Contractor.cs
+END
+Employee.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/33740/FKIntegration/CardInexes/Employee.cs
+END
+Country.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/34428/FKIntegration/CardInexes/Country.cs
+END
+Department.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/33740/FKIntegration/CardInexes/Department.cs
+END
+Dictionary.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/33740/FKIntegration/CardInexes/Dictionary.cs
+END
+BankingAccount.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/33740/FKIntegration/CardInexes/BankingAccount.cs
+END

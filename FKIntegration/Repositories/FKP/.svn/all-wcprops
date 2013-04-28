@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/50789/FKIntegration/Repositories/FKP
+END
+AccountRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/33740/FKIntegration/Repositories/FKP/AccountRepository.cs
+END
+CardIndexBaseRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/47671/FKIntegration/Repositories/FKP/CardIndexBaseRepository.cs
+END
+ContractorRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/47671/FKIntegration/Repositories/FKP/ContractorRepository.cs
+END
+EmployeeRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/47671/FKIntegration/Repositories/FKP/EmployeeRepository.cs
+END
+CountryRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/47671/FKIntegration/Repositories/FKP/CountryRepository.cs
+END
+DepartmentRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/47671/FKIntegration/Repositories/FKP/DepartmentRepository.cs
+END
+DictionaryRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/47671/FKIntegration/Repositories/FKP/DictionaryRepository.cs
+END
+BankingAccountRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/47671/FKIntegration/Repositories/FKP/BankingAccountRepository.cs
+END
+DocumentDefinitionRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/50789/FKIntegration/Repositories/FKP/DocumentDefinitionRepository.cs
+END
+SyncroData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/48425/FKIntegration/Repositories/FKP/SyncroData.cs
+END
+CurrencyRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/47671/FKIntegration/Repositories/FKP/CurrencyRepository.cs
+END
