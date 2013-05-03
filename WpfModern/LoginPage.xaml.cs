@@ -34,6 +34,7 @@ namespace WpfModern
 
                 if (window != null)
                     window.DialogResult = true;
+
             }
 
             ConfigurationProvider.Save(_applicationConfiguration);
