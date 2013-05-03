@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using FirstFloor.ModernUI.Windows.Controls;
 using FKIntegration.CardInexes;
+using FKIntegration.Documents;
 
 namespace WpfModern
 {
@@ -26,11 +27,7 @@ namespace WpfModern
         public Page1()
         {
             InitializeComponent();
-            ThisDataContext dataContext = new ThisDataContext();
-            DataContext = dataContext;
-            //GridContractorsFK.ItemsSource = ((ThisDataContext)DataContext).contractorsFK;
-
-            //GridContractorsFK.DataContext = dataContext.contractorsFK;
+            DataContext = new ThisDataContext();
         }
     }
 
@@ -42,6 +39,10 @@ namespace WpfModern
             DocumentNumber = "Doc124";
 
             contractorsFK =new ObservableCollection<Contractor>(FKIntegration.FKIntegrationManager.ContractorsRepository.GetAll());
+
+            Document = new BankStatement("");
+            Document.AddDebitPosition("opis pozycji", 100, "100", 20, "200");
+
 
             //contractorsFK.Add(new Contractor() { Name = "test", Nip = new FKIntegration.Nip("1231231212") });
         }
@@ -56,6 +57,10 @@ namespace WpfModern
             get { return contractorsFK; }
             set { contractorsFK = value; }
         }
+
+
+        public BankStatement Document { get; set; }
+        
 
 
         //public ObservableCollection<Contractor> contractorsFK = new ObservableCollection<Contractor>();
