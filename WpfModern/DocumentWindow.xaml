@@ -9,11 +9,6 @@
       MaxHeight ="800"
 	Title="Page1" Height="450">
     <Page.Resources>
-        <Style TargetType="{x:Type DatePickerTextBox}">
-            <Setter Property="Text" Value="Wybierz date" />
-            <!--<Setter Property="Margin" Value="5"></Setter>-->
-            <!--<Setter Property="Padding" Value="5"></Setter>-->
-        </Style>
         <Style TargetType="{x:Type DatePicker}">
             <Setter Property="Margin" Value="2"></Setter>
         </Style>

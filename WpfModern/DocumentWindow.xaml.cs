@@ -38,33 +38,20 @@ namespace WpfModern
             CurrentDate = DateTime.Now;
             DocumentNumber = "Doc124";
 
-            contractorsFK =new ObservableCollection<Contractor>(FKIntegration.FKIntegrationManager.ContractorsRepository.GetAll());
+            ContractorsFK =new ObservableCollection<Contractor>(FKIntegration.FKIntegrationManager.ContractorsRepository.GetAll());
 
-            Document = new BankStatement("");
+            Document = new BankStatement("WB");
             Document.AddDebitPosition("opis pozycji", 100, "100", 20, "200");
 
-
-            //contractorsFK.Add(new Contractor() { Name = "test", Nip = new FKIntegration.Nip("1231231212") });
+            Document.Save();
         }
 
         public DateTime CurrentDate { get; set; }
         public string DocumentNumber { get; set; }
 
-        private ObservableCollection<Contractor> contractorsFK;
-
-        public ObservableCollection<Contractor> ContractorsFK
-        {
-            get { return contractorsFK; }
-            set { contractorsFK = value; }
-        }
-
+        public ObservableCollection<Contractor> ContractorsFK { get; set; }
 
         public BankStatement Document { get; set; }
-        
 
-
-        //public ObservableCollection<Contractor> contractorsFK = new ObservableCollection<Contractor>();
-
-       
     }
 }
