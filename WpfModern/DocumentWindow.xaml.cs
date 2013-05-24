@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using FirstFloor.ModernUI.Windows.Controls;
 using FKIntegration.CardInexes;
 using FKIntegration.Documents;
+using Microsoft.Win32;
 
 namespace WpfModern
 {
@@ -48,6 +49,16 @@ namespace WpfModern
             //{
             //    //eachPosition.CreditAccount.Replace
             //}
+        }
+
+        private void btnOpenWB_Click(object sender, RoutedEventArgs e)
+        {
+            var openFile = new OpenFileDialog();
+            openFile.Filter = "All documents (.*)|*.*";
+            if (openFile.ShowDialog() == true)
+            {
+                string s = openFile.FileName;
+            }
         }
     }
 

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0633901E-FE3C-44B1-8039-BE81130AAF2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAMAL.ZP.BOL.BankStatements</RootNamespace>
+    <AssemblyName>DAMAL.ZP.BOL.BankStatements</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>PB_key14.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=2.0.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SharedDlls\ComponentFactory.Krypton.Toolkit.DLL</HintPath>
+    </Reference>
+    <Reference Include="Equin.ApplicationFramework.BindingListView, Version=1.2.3608.42391, Culture=neutral, PublicKeyToken=ddd3df955e648db5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SharedDlls\Equin.ApplicationFramework.BindingListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FKSender.cs" />
+    <Compile Include="IFKSender.cs" />
+    <Compile Include="Import\BankSpodzielczy\BSMT940BankStatement.cs" />
+    <Compile Include="Import\BankSpodzielczy\BSMT940BankStatementPosition.cs" />
+    <Compile Include="Import\BankStatementImporter.cs" />
+    <Compile Include="Import\Bre\BreBankStatement.cs" />
+    <Compile Include="Import\Bre\BreBankStatementPosition.cs" />
+    <Compile Include="Import\CitiDirect\CitiDirectMT940BankStatement.cs" />
+    <Compile Include="Import\CitiDirect\CitiDirectMT940BankStatementPosition.cs" />
+    <Compile Include="Import\BPH\BPHBankStatement.cs" />
+    <Compile Include="Import\BPH\BPHBankStatementPosition.cs" />
+    <Compile Include="Import\City_Hays\CitiBankStatement.cs" />
+    <Compile Include="Import\City_Hays\CitiBankStatementPosition.cs" />
+    <Compile Include="Import\CitiDirect_Swift\CitiDirectMT940SwiftBankStatement.cs" />
+    <Compile Include="Import\CitiDirect_Swift\CitiDirectMT940SwiftBankStatementPosition.cs" />
+    <Compile Include="Import\ParibasMT940\ParibasMT940BankStatement.cs" />
+    <Compile Include="Import\ParibasMT940\ParibasMT940BankStatementPosition.cs" />
+    <Compile Include="Import\PKOxml\PKOXMLBankStatement.cs" />
+    <Compile Include="Import\PKOxml\PKOxmlBankStatementPosition.cs" />
+    <Compile Include="Import\SocieteGenerale\SocieteBankStatement.cs" />
+    <Compile Include="Import\SocieteGenerale\SocieteBankStatementPosition.cs" />
+    <Compile Include="Import\TransCollect2\TransCollect2BankStatement.cs" />
+    <Compile Include="Import\TransCollect2\TransCollect2BankStatementPosition.cs" />
+    <Compile Include="Import\TransDebit\TransDebitBankStatement.cs" />
+    <Compile Include="Import\TransDebit\TransDebitBankStatementPosition.cs" />
+    <Compile Include="Import\DateTimeHelper.cs" />
+    <Compile Include="Import\DeutscheBankMT940\DeutscheBankBankStatementPosition.cs" />
+    <Compile Include="Import\DeutscheBankMT940\DeutscheBankMT940BankStatementParser.cs" />
+    <Compile Include="Import\DeutscheBankXML\DBXMLBankStatement.cs" />
+    <Compile Include="Import\IBankStatementParser.cs" />
+    <Compile Include="Import\ING\INGMT940BankStatement.cs" />
+    <Compile Include="Import\ING\INGMT940BankStatementPosition.cs" />
+    <Compile Include="Import\ImportFiles.cs" />
+    <Compile Include="Import\Liniowy\LiniowyBankStatement.cs" />
+    <Compile Include="Import\Liniowy\LiniowyBankStatementPosition.cs" />
+    <Compile Include="Import\MultiCash\MT940BankStatement.cs" />
+    <Compile Include="Import\MultiCash\MT940BankStatementPosition.cs" />
+    <Compile Include="Import\FortisMultiCash\FortisMT940BankStatement.cs" />
+    <Compile Include="Import\FortisMultiCash\FortisMT940BankStatementPosition.cs" />
+    <Compile Include="Import\RaiffeisenOnLine\RaiffeisenMT940BankStatement.cs" />
+    <Compile Include="Import\RaiffeisenOnLine\RaiffeisenMT940BankStatementPosition.cs" />
+    <Compile Include="CustomerMapping.cs" />
+    <Compile Include="Import\TransCollect\TransCollectBankStatement.cs" />
+    <Compile Include="Import\TransCollect\TransCollectBankStatementPosition.cs" />
+    <Compile Include="MT940BankStatement.cs" />
+    <Compile Include="MT940BankStatementPosition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidatorIBAN.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DAMAL.BOL\DAMAL.BOL.Common\DAMAL.BOL.Common.csproj">
+      <Project>{69FA435A-9277-4D3F-A7E0-9AE4F8AC84BD}</Project>
+      <Name>DAMAL.BOL.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DAMAL.BOL\DAMAL.BOL.IWB\DAMAL.BOL.IWB.csproj">
+      <Project>{D7CB4026-E28B-4D16-9170-6995FE0D3B23}</Project>
+      <Name>DAMAL.BOL.IWB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DAMAL.GUI\DAMAL.GUI.Controls\DAMAL.GUI.Controls.csproj">
+      <Project>{91357977-3147-4AA7-851A-63E1E49A8FBA}</Project>
+      <Name>DAMAL.GUI.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FKIntegration\FKIntegration.csproj">
+      <Project>{870f0c58-970a-4b05-bd9b-3e993eab1a6b}</Project>
+      <Name>FKIntegration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Import\BPH\businessnet_opis_formatu_pliku_wyciag_w_sta_20050104.pdf" />
+    <None Include="Import\City_Hays\Format pliku eksportowego dla HAYS.doc" />
+    <None Include="Import\RaiffeisenOnLine\struktura plikow i wyciagow %282%29.pdf" />
+    <None Include="PB_key14.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Import\ElixMas\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

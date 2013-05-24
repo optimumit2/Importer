@@ -23,41 +23,36 @@
         </Style>
     </Page.Resources>
 
-    <Grid Style="{StaticResource ContentRoot}">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Grid Margin="3">
+        <TextBlock x:Name="btnOpenWB" Grid.Row="0">           
+            <Hyperlink Click="btnOpenWB_Click">
+                Otwórz wyciąg bankowy
+            </Hyperlink>
+        </TextBlock>
+
+        <Grid Grid.Row="1" Style="{StaticResource ContentRoot}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+
+            <Grid Margin="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <!--<mui:BBCodeBlock>Data wprowadzenia:</mui:BBCodeBlock>-->
-
-                    <mui:BBCodeBlock>Data wprowadzenia:</mui:BBCodeBlock>
-                    <DatePicker Grid.Column="1" SelectedDate="{Binding CurrentDate}"/>
-                    <mui:BBCodeBlock Grid.Row="1">Data dokumentu:</mui:BBCodeBlock>
-                    <DatePicker Grid.Column="1" Grid.Row="1"></DatePicker>
-                </Grid>
-                <Grid Column="1">
-                    <Grid Margin="20,0,0,0">
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition/>
@@ -66,163 +61,180 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <mui:BBCodeBlock>Nr ewidencyjny:</mui:BBCodeBlock>
-                        <Grid Grid.Column="1">
+                        <!--<mui:BBCodeBlock>Data wprowadzenia:</mui:BBCodeBlock>-->
+
+                        <mui:BBCodeBlock>Data wprowadzenia:</mui:BBCodeBlock>
+                        <DatePicker Grid.Column="1" SelectedDate="{Binding CurrentDate}"/>
+                        <mui:BBCodeBlock Grid.Row="1">Data dokumentu:</mui:BBCodeBlock>
+                        <DatePicker Grid.Column="1" Grid.Row="1"></DatePicker>
+                    </Grid>
+                    <Grid Column="1">
+                        <Grid Margin="20,0,0,0">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <ComboBox>
-                                <ComboBoxItem>Wb</ComboBoxItem>
-                            </ComboBox>
-                            <mui:BBCodeBlock Grid.Column="1" HorizontalAlignment="Right">Okres spr.</mui:BBCodeBlock>
-                            <ComboBox Grid.Column="2">
-                                <ComboBoxItem>1</ComboBoxItem>
-                                <ComboBoxItem>2</ComboBoxItem>
-                                <ComboBoxItem>3</ComboBoxItem>
-                                <ComboBoxItem>4</ComboBoxItem>
-                                <ComboBoxItem>5</ComboBoxItem>
-                                <ComboBoxItem>6</ComboBoxItem>
-                                <ComboBoxItem>7</ComboBoxItem>
-                                <ComboBoxItem>8</ComboBoxItem>
-                                <ComboBoxItem>9</ComboBoxItem>
-                                <ComboBoxItem>10</ComboBoxItem>
-                                <ComboBoxItem>11</ComboBoxItem>
-                                <ComboBoxItem>12</ComboBoxItem>
-                            </ComboBox>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <mui:BBCodeBlock>Nr ewidencyjny:</mui:BBCodeBlock>
+                            <Grid Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <ComboBox>
+                                    <ComboBoxItem>Wb</ComboBoxItem>
+                                </ComboBox>
+                                <mui:BBCodeBlock Grid.Column="1" HorizontalAlignment="Right">Okres spr.</mui:BBCodeBlock>
+                                <ComboBox Grid.Column="2">
+                                    <ComboBoxItem>1</ComboBoxItem>
+                                    <ComboBoxItem>2</ComboBoxItem>
+                                    <ComboBoxItem>3</ComboBoxItem>
+                                    <ComboBoxItem>4</ComboBoxItem>
+                                    <ComboBoxItem>5</ComboBoxItem>
+                                    <ComboBoxItem>6</ComboBoxItem>
+                                    <ComboBoxItem>7</ComboBoxItem>
+                                    <ComboBoxItem>8</ComboBoxItem>
+                                    <ComboBoxItem>9</ComboBoxItem>
+                                    <ComboBoxItem>10</ComboBoxItem>
+                                    <ComboBoxItem>11</ComboBoxItem>
+                                    <ComboBoxItem>12</ComboBoxItem>
+                                </ComboBox>
+                            </Grid>
+                            <mui:BBCodeBlock Grid.Row="1">Nr dokumentu:</mui:BBCodeBlock>
+                            <TextBox BorderThickness="0,0,0,1" Grid.Column="1" Grid.Row="1" Text="{Binding DocumentNumber}"/>
                         </Grid>
-                        <mui:BBCodeBlock Grid.Row="1">Nr dokumentu:</mui:BBCodeBlock>
-                        <TextBox BorderThickness="0,0,0,1" Grid.Column="1" Grid.Row="1" Text="{Binding DocumentNumber}"/>
                     </Grid>
                 </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <mui:BBCodeBlock Grid.Column="0">Treść:</mui:BBCodeBlock>
+                    <TextBox BorderThickness="0,0,0,1" Grid.Column="1"></TextBox>
+                </Grid>
             </Grid>
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <mui:BBCodeBlock Grid.Column="0">Treść:</mui:BBCodeBlock>
-                <TextBox BorderThickness="0,0,0,1" Grid.Column="1"></TextBox>
-            </Grid>
-        </Grid>
 
-        <DataGrid x:Name="gridDocument" Grid.Row="1" AutoGenerateColumns="False"
+            <DataGrid x:Name="gridDocument" Grid.Row="1" AutoGenerateColumns="False"
                   ItemsSource ="{Binding Path=Document.PositionList}" SelectedItem="{Binding SelectedPosition}">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Lp"  Binding="{Binding Number}"/>
-                <DataGridTextColumn Header="Opis" Width="2*" Binding="{Binding DebitDescription}"/>
-                <DataGridTextColumn Header="Kwota Wn" Width="*" Binding="{Binding DebitAmount}"/>
-                <DataGridTextColumn Header="Konto Wn" Width="*" Binding="{Binding DebitAccount}"/>
-                <DataGridTextColumn Header="Kwota Ma" Width="*" Binding="{Binding CreditAmount}"/>
-                <DataGridTextColumn Header="Konto Ma" Width="*" Binding="{Binding CreditAccount}"/>
-            </DataGrid.Columns>
-        </DataGrid>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Lp"  Binding="{Binding Number}"/>
+                    <DataGridTextColumn Header="Opis" Width="2*" Binding="{Binding DebitDescription}"/>
+                    <DataGridTextColumn Header="Kwota Wn" Width="*" Binding="{Binding DebitAmount}"/>
+                    <DataGridTextColumn Header="Konto Wn" Width="*" Binding="{Binding DebitAccount}"/>
+                    <DataGridTextColumn Header="Kwota Ma" Width="*" Binding="{Binding CreditAmount}"/>
+                    <DataGridTextColumn Header="Konto Ma" Width="*" Binding="{Binding CreditAccount}"/>
+                </DataGrid.Columns>
+            </DataGrid>
 
-        <Grid Grid.Row="2">
-            <TabControl>
-                <TabItem Header="Kontrahenci">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
+            <Grid Grid.Row="2">
+                <TabControl>
+                    <TabItem Header="Kontrahenci">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
-                        <Grid Grid.Column="0">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid Grid.Row="0">
-                                <Label Content="Kontrahent pozycji" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top" Width="326"/>
-                                <Label Content="Nazwa" HorizontalAlignment="Left" Height="26" Margin="10,37,0,0" VerticalAlignment="Top" Width="57"/>
-                                <TextBox x:Name="txtContractorName" Height="26" Margin="72,37,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                            </Grid>
-                            <Grid Grid.Row="1">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Label Content="Kontrahent pozycji" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top" Width="326"/>
+                                    <Label Content="Nazwa" HorizontalAlignment="Left" Height="26" Margin="10,37,0,0" VerticalAlignment="Top" Width="57"/>
+                                    <TextBox x:Name="txtContractorName" Height="26" Margin="72,37,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                    <Grid Grid.Column="0">
-                                        <Label Content="Skrót" HorizontalAlignment="Left" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" Width="57"/>
-                                        <TextBox x:Name="txtContractorShortcut" Height="26" Margin="72,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                                    </Grid>
-                                    <Grid Grid.Column="1">
-                                        <Label Content="NIP" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="38"/>
-                                        <TextBox x:Name="txtContractorNIP" Height="26" Margin="52,0,10,0"  VerticalAlignment="Top"/>
+                                        <Grid Grid.Column="0">
+                                            <Label Content="Skrót" HorizontalAlignment="Left" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" Width="57"/>
+                                            <TextBox x:Name="txtContractorShortcut" Height="26" Margin="72,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                                        </Grid>
+                                        <Grid Grid.Column="1">
+                                            <Label Content="NIP" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="38"/>
+                                            <TextBox x:Name="txtContractorNIP" Height="26" Margin="52,0,10,0"  VerticalAlignment="Top"/>
+                                        </Grid>
                                     </Grid>
                                 </Grid>
-                            </Grid>
-                            <Grid Grid.Row="2">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0">
-                                        <Label Content="Miasto" HorizontalAlignment="Left" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" Width="57" />
-                                        <TextBox x:Name="txtContractorCity"  Height="26" Margin="72,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top" />
-                                    </Grid>
-                                    <Grid Grid.Column="1">
-                                        <Label Content="Kod" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                        <TextBox x:Name="txtContractorPostalCode" Height="26" Margin="52,0,10,0" VerticalAlignment="Top" />
+                                <Grid Grid.Row="2">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0">
+                                            <Label Content="Miasto" HorizontalAlignment="Left" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" Width="57" />
+                                            <TextBox x:Name="txtContractorCity"  Height="26" Margin="72,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+                                        </Grid>
+                                        <Grid Grid.Column="1">
+                                            <Label Content="Kod" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                                            <TextBox x:Name="txtContractorPostalCode" Height="26" Margin="52,0,10,0" VerticalAlignment="Top" />
+                                        </Grid>
                                     </Grid>
                                 </Grid>
-                            </Grid>
 
-                            <Grid Grid.Row="3">
-                                <Label Content="Ulica" HorizontalAlignment="Left" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" Width="44"/>
-                                <TextBox x:Name="txtContractorStreet" Height="26" Margin="72,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                                <Grid Grid.Row="3">
+                                    <Label Content="Ulica" HorizontalAlignment="Left" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" Width="44"/>
+                                    <TextBox x:Name="txtContractorStreet" Height="26" Margin="72,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                                </Grid>
+                                <Grid Grid.Row="4">
+                                    <Button x:Name="btnAddContractorToFK" Content="Dodaj do FK" Margin="0,0,9.5,0" HorizontalAlignment="Right" Width="152" Height="26" VerticalAlignment="Bottom"/>
+                                </Grid>
                             </Grid>
-                            <Grid Grid.Row="4">
-                                <Button x:Name="btnAddContractorToFK" Content="Dodaj do FK" Margin="0,0,9.5,0" HorizontalAlignment="Right" Width="152" Height="26" VerticalAlignment="Bottom"/>
-                            </Grid>
-                        </Grid>
-                        <GridSplitter Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Stretch" ResizeBehavior="PreviousAndNext" Width="5"/>
-                        <Grid Grid.Column="2">
-                            <DataGrid x:Name="GridContractorsFK" Margin="10,0,0,43" ScrollViewer.HorizontalScrollBarVisibility ="Auto" AutoGenerateColumns="False"
+                            <GridSplitter Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Stretch" ResizeBehavior="PreviousAndNext" Width="5"/>
+                            <Grid Grid.Column="2">
+                                <DataGrid x:Name="GridContractorsFK" Margin="10,0,0,43" ScrollViewer.HorizontalScrollBarVisibility ="Auto" AutoGenerateColumns="False"
                                       ItemsSource ="{Binding Path=ContractorsFK}" VerticalGridLinesBrush="#FF4572D4" AlternatingRowBackground="#FFFFFCE6" AlternationCount="1" IsReadOnly="True" 
                                       SelectedItem="{Binding SelectedContractor}">
-                                <DataGrid.HorizontalGridLinesBrush>
-                                    <SolidColorBrush Color="#FF4572D4" Opacity="0.7"/>
-                                </DataGrid.HorizontalGridLinesBrush>
+                                    <DataGrid.HorizontalGridLinesBrush>
+                                        <SolidColorBrush Color="#FF4572D4" Opacity="0.7"/>
+                                    </DataGrid.HorizontalGridLinesBrush>
 
-                                <DataGrid.Columns>
-                                    <DataGridTextColumn Header="id" Visibility="Hidden" Binding="{Binding Id}"/>
-                                    <DataGridTextColumn Header="Pozycja" Width="auto" Binding="{Binding Position}"/>
-                                    <DataGridTextColumn Header="Skrót" Width="auto" Binding="{Binding Shortcut}"/>
-                                    <DataGridTextColumn Header="Nazwa" Width="auto" Binding="{Binding Name}"/>
-                                    <DataGridTextColumn Header="Nip" Width="auto" Binding="{Binding Value}"/>
-                                    <DataGridTextColumn Header="Miejscowość" Width="auto" Binding="{Binding Address.City}"/>
-                                    <DataGridTextColumn Header="Ulica" Width="auto" Binding="{Binding Address.Street}"/>
-                                    <DataGridTextColumn Header="Nr. domu" Width="auto" Binding="{Binding Address.HouseNo}"/>
-                                    <DataGridTextColumn Header="Nr. mieszk." Width="auto" Binding="{Binding Address.FlatNo}"/>
-                                    <DataGridTextColumn Header="Kod" Width="auto" Binding="{Binding Address.PostalCode}"/>
-                                    <DataGridTextColumn Header="Regon" Width="auto" Binding="{Binding Regon.Value}"/>
-                                </DataGrid.Columns>
-                            </DataGrid>
-                            <Button x:Name="btnUseSelectedContractor" Content="Użyj kontrahenta" Margin="0,0,0,6" HorizontalAlignment="Right" Width="151" Height="32" VerticalAlignment="Bottom" Click="btnUseSelectedContractor_Click"/>
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="id" Visibility="Hidden" Binding="{Binding Id}"/>
+                                        <DataGridTextColumn Header="Pozycja" Width="auto" Binding="{Binding Position}"/>
+                                        <DataGridTextColumn Header="Skrót" Width="auto" Binding="{Binding Shortcut}"/>
+                                        <DataGridTextColumn Header="Nazwa" Width="auto" Binding="{Binding Name}"/>
+                                        <DataGridTextColumn Header="Nip" Width="auto" Binding="{Binding Value}"/>
+                                        <DataGridTextColumn Header="Miejscowość" Width="auto" Binding="{Binding Address.City}"/>
+                                        <DataGridTextColumn Header="Ulica" Width="auto" Binding="{Binding Address.Street}"/>
+                                        <DataGridTextColumn Header="Nr. domu" Width="auto" Binding="{Binding Address.HouseNo}"/>
+                                        <DataGridTextColumn Header="Nr. mieszk." Width="auto" Binding="{Binding Address.FlatNo}"/>
+                                        <DataGridTextColumn Header="Kod" Width="auto" Binding="{Binding Address.PostalCode}"/>
+                                        <DataGridTextColumn Header="Regon" Width="auto" Binding="{Binding Regon.Value}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                                <Button x:Name="btnUseSelectedContractor" Content="Użyj kontrahenta" Margin="0,0,0,6" HorizontalAlignment="Right" Width="151" Height="32" VerticalAlignment="Bottom" Click="btnUseSelectedContractor_Click"/>
+                            </Grid>
                         </Grid>
-                    </Grid>
-                </TabItem>
+                    </TabItem>
 
-                <TabItem Header="Konto FK">
-                    <Grid>
-                        <Label Content="Plan Kont" Margin="90,50,533,109"/>
-                    </Grid>
-                </TabItem>
+                    <TabItem Header="Konto FK">
+                        <Grid>
+                            <Label Content="Plan Kont" Margin="90,50,533,109"/>
+                        </Grid>
+                    </TabItem>
 
-            </TabControl>
-        </Grid>
+                </TabControl>
+            </Grid>
 
 
-        <!--
+            <!--
         <Grid Grid.Row="2">
             <TabPanel>
                 <TabItem Header="Kontrahenci">
@@ -250,5 +262,7 @@
                 <TabItem Header="Konto FK"></TabItem>
             </TabPanel>
         </Grid>-->
+        </Grid>
+
     </Grid>
 </Page>
